@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body {
+        background-color: black;
+        color: white;
+    }
+
+    .buttonStyle {
+        border-radius: 20px;
+        background-color: blanchedalmond;
+        cursor: pointer;
+    }
+
+    .grassetto {
+        font-weight: bold;
+        
+    }
+.colore{
+    color: aqua;
+}
+.sparisci{
+    display: none;
+}
+    
+</style>
+
+<body class="body">
+    <p>primo post</p>
+    <p>secondo post</p>
+    <p>terzo post</p>
+
+    <br><br>
+
+    <button onclick="colore()" class="buttonStyle">Cambia colore</button>
+    <button onclick="grassetto()" class="buttonStyle">Grassetto</button>
+    <button onclick="sparisci()" class="buttonStyle">Puff!</button>
+
+    <script>
+        function grassetto() {
+            let paragrafi
+            paragrafi = document.getElementsByTagName("p")
+            for (let i = 0; i < paragrafi.length; i++) {
+
+                paragrafi[i].classList.add("grassetto")
+            }
+        }
+       
+        function colore() {
+            let paragrafi
+            paragrafi = document.getElementsByTagName("p")
+            for (let i = 0; i < paragrafi.length; i++) {
+
+                paragrafi[i].classList.add("colore")
+            }
+        }
+
+        function sparisci() {
+            let paragrafi
+            paragrafi = document.getElementsByTagName("p")
+            for (let i = 0; i < paragrafi.length; i++) {
+
+                paragrafi[i].classList.add("sparisci")
+            }
+        }
+    </script>
+</body>
+
+</html>
